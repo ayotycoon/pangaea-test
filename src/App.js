@@ -1,24 +1,26 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import AllProducts from './components/pages/AllProducts/AllProducts';
+import CartModal from './components/misc/CartModal/CartModal';
+import Layout from './components/misc/Layout/Layout';
+
+import {ApolloProvider} from 'react-apollo';
+import { Provider, store } from './store';
+import { apolloClient } from './Providers/misc';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={apolloClient}>
+      <Provider store={store}>
+        <CartModal />
+        <Layout>
+          <AllProducts />
+        </Layout>
+
+      </Provider>
+    </ApolloProvider>
   );
 }
 

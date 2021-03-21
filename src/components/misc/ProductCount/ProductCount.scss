@@ -1,0 +1,19 @@
+.ProductCount{
+    height: 34px;
+    width: 76px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ padding: 0 7px;
+    border: .5px solid #bcbcbc;
+    align-items: center;
+
+    div:nth-child(1),div:nth-child(3){
+font-size: 15px;
+cursor: pointer;
+    }
+    div:nth-child(2){
+font-size: 13px;
+    }
+
+}
