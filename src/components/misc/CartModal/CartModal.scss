@@ -136,7 +136,7 @@ select{
             display:flex;
             margin-top: 10px;
             flex-direction: row;
-           // justify-content:space-between;
+           justify-content:space-between;
            align-items: center;
            .bottom-currency{
                margin-left: 5px;
@@ -160,8 +160,11 @@ select{
         
             margin-left: 0;
             height: 100vh;
+            .cart-item-bottom{
+            
+               justify-content: flex-start;
 
-                }
+                }}
     }
 }
 

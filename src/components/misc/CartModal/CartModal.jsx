@@ -95,7 +95,7 @@ if(newValue){
     product.quantity = newValue
     props.patchCart(product)
 }else {
-    removeProductFromCart(product)
+    props.removeProductFromCart(product)
 }
 
 
