@@ -10,7 +10,7 @@ const ProductCount = (props) => {
 
     const add = (n) => {
         const inc = value + n;
-        if (inc < 1) return;
+        if (inc < 0) return;
 
         if(props.onAdd){
             props.onAdd(inc);

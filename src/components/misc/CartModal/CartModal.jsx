@@ -91,8 +91,14 @@ const CartModal = (props) => {
                                         <div className='cart-item-bottom'>
                                     
                                         <ProductCount value={product.quantity} onAdd={(newValue) => {
-product.quantity = newValue
-props.patchCart(product)
+if(newValue){
+    product.quantity = newValue
+    props.patchCart(product)
+}else {
+    removeProductFromCart(product)
+}
+
+
                                         }} />
 
 
